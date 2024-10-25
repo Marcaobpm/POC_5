@@ -88,3 +88,71 @@ Você só precisa renderizar uma interface com base nas props sem alterar o cont
 Não há necessidade de interações complexas, como gerenciamento de estado ou ciclo de vida do componente.
 
 Componentes simples são essenciais para dividir interfaces complexas em partes menores e modulares, garantindo uma arquitetura de código mais limpa e fácil de manter.
+
+## Estrutura de Projeto NextJS 14 ou superior
+
+# Estrutura de Pastas Padrão
+/app (pasta raiz dos componentes)
+
+A app agora é a base para roteamento e renderização. Cada subpasta representa uma rota, e os arquivos dentro das rotas podem incluir componentes, layouts e lógica de renderização.
+/components
+
+Para armazenar componentes reutilizáveis e isolados, como botões, cards e headers.
+Exemplo: Um componente Button.js que será usado em várias páginas.
+/public
+
+Armazena arquivos estáticos, como imagens, fontes e outros assets. Esses arquivos podem ser acessados diretamente via URL.
+Exemplo: Acessando uma imagem logo.png armazenada em public/logo.png com "/logo.png".
+/styles
+
+Pasta para arquivos de estilos globais e módulos CSS específicos de componentes.
+Arquivo comum: globals.css, onde se define o estilo básico da aplicação.
+/lib
+
+Destinada a lógica auxiliar e funções utilitárias, como hooks, constantes, e funções de manipulação de dados que podem ser usadas em diversas partes da aplicação.
+/api
+
+Next.js permite construir uma API interna na pasta api sob a app/ (ou pages/api se estiver usando o Pages Router), com rotas que criam endpoints diretamente para lógica back-end.
+Exemplo: app/api/posts/route.js cria um endpoint em /api/posts.
+/middleware.js
+
+Arquivo opcional para middlewares que controlam requisições, geralmente usado para autenticação e redirecionamento.
+
+# Estrutura Interna da app/
+1. page.js
+Este é o arquivo principal para uma rota específica, ou seja, renderiza a UI que o usuário vê quando acessa uma rota.
+
+2. layout.js
+Define o layout compartilhado entre páginas e sub-rotas, como cabeçalhos e rodapés.
+Uma vez definido, aplica-se automaticamente a todas as rotas na subpasta onde está.
+
+3. loading.js
+Exibe um indicador de carregamento enquanto os dados da página estão sendo carregados. Esse arquivo é opcional e melhora a experiência do usuário ao fornecer feedback visual.
+
+4. error.js
+Arquivo opcional para lidar com erros específicos daquela rota, possibilitando customizar a mensagem de erro que o usuário verá.
+
+5. Rotas Dinâmicas ([slug])
+Roteamento dinâmico é feito criando pastas com nome entre colchetes ([slug]). Essas rotas podem capturar valores dinâmicos diretamente da URL.
+Exemplo: app/blog/[slug]/page.js renderiza uma página específica de blog com um slug passado na URL.
+
+# Estrutura de Código e Renderização
+React Server Components (RSC)
+
+Por padrão, o Next.js 13/14 utiliza React Server Components no App Router, o que melhora a performance ao renderizar componentes no servidor. Isso permite que a aplicação busque dados no servidor sem necessidade de estado ou efeitos client-side.
+Streaming e Suspense
+
+Com suporte ao streaming e ao Suspense, o Next.js permite que a página comece a renderizar parcialmente antes de todos os dados serem carregados, melhorando o tempo de resposta percebido pelo usuário.
+Data Fetching e Cache
+
+A nova estrutura simplifica a busca de dados com métodos como fetch, que pode ser usado diretamente em componentes, com controle de cache e revalidação.
+
+# Como Iniciar com o Next.js 14 e Estruturar o Projeto
+
+1. Para iniciar e criar um projeto com essa estrutura: """ npx create-next-app@latest my-next-app """
+2. Adicione Rotas e Componentes: Estruture suas rotas dentro da app/ e crie subpastas para organizar as diferentes partes do seu projeto, seguindo a estrutura modularizada.
+3. Configure o Roteamento Dinâmico: Adicione pastas com [slug] para criar páginas dinâmicas.
+4. Desenvolva Componentes Reutilizáveis: Coloque componentes na pasta components/, criando uma estrutura limpa e reutilizável.
+
+Esse novo modelo de estrutura em Next.js 14 permite um fluxo de desenvolvimento mais rápido e otimizado, especialmente em grandes aplicações onde a modularidade e a performance são prioridades.
+
