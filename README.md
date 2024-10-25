@@ -63,3 +63,28 @@ Rodapé: Exibe links com espaçamento específico e um efeito de sublinhado ao p
 5. Responsividade
 Em Telas Pequenas: Ajusta o layout com padding reduzido na .page, alinhamento centralizado para a .main ol, e botões de chamada de ação em coluna, tornando o layout mais compacto.
 Hover Condicional: Aplicado apenas em dispositivos não-touch, melhora a experiência em desktops sem comprometer a responsividade.
+
+## Componentes simples JS
+
+Como Criar um Componente Simples (Sem Estado)
+1. Função JavaScript: Um componente funcional é, basicamente, uma função JavaScript que recebe um parâmetro props.
+
+2. Retorno do JSX: Retorna o JSX que descreve a UI que será exibida.
+
+3. Props como Argumentos: As props são passadas como argumento e permitem que o componente receba dados dinâmicos para renderizar.
+
+Vantagens dos Componentes Simples
+1. Desempenho: Como não mantêm um estado interno, são mais leves e rápidos.
+
+2. Reutilização e Modularidade: São ideais para elementos de UI reutilizáveis e pequenos.
+
+3. Legibilidade e Manutenção: Como possuem menos lógica, são mais fáceis de entender e manter.
+
+   Quando Usar Componentes Sem Estado
+Esses componentes são ideais quando:
+
+Você só precisa renderizar uma interface com base nas props sem alterar o conteúdo dinamicamente.
+
+Não há necessidade de interações complexas, como gerenciamento de estado ou ciclo de vida do componente.
+
+Componentes simples são essenciais para dividir interfaces complexas em partes menores e modulares, garantindo uma arquitetura de código mais limpa e fácil de manter.
