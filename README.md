@@ -42,13 +42,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/b
 ## Explicação CSS
 
 Estrutura Geral
-Variáveis Globais: Usa variáveis CSS no :root para definir as cores padrão e estilos globais, como --background (cor de fundo) e --foreground (cor do texto). A presença do prefers-color-scheme permite a troca automática entre cores claras e escuras, respeitando a preferência do usuário.
 
-Reset Básico: Elementos html, body, e * garantem que o conteúdo ocupe a largura da tela (max-width: 100vw) e evite problemas de overflow horizontal.
+1. Variáveis Globais: Usa variáveis CSS no :root para definir as cores padrão e estilos globais, como --background (cor de fundo) e --foreground (cor do texto). A presença do prefers-color-scheme permite a troca automática entre cores claras e escuras, respeitando a preferência do usuário.
 
-Definições Globais: Tipos de letra e suavização são aplicados ao body para garantir que todo o texto e aparência visual sejam consistentes.
+2. Reset Básico: Elementos html, body, e * garantem que o conteúdo ocupe a largura da tela (max-width: 100vw) e evite problemas de overflow horizontal.
+
+3. Definições Globais: Tipos de letra e suavização são aplicados ao body para garantir que todo o texto e aparência visual sejam consistentes.
 
 Módulos Específicos
+
 1. .page
 Definição de cores adicionais: Define algumas cores para fundos e efeitos (--gray-alpha-100 e --gray-alpha-200), ajustando-as com transparência (rgba) e valores diferentes para o tema claro e escuro.
 Grid Layout: Estabelece uma estrutura de página em três linhas (grid-template-rows), centrando conteúdo horizontal e verticalmente.
