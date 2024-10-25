@@ -149,25 +149,12 @@ A nova estrutura simplifica a busca de dados com métodos como fetch, que pode s
 
 # Como Iniciar com o Next.js 14 e Estruturar o Projeto
 
-1. Para iniciar e criar um projeto com essa estrutura: npx create-next-app@latest my-next-app
+1. Para iniciar e criar um projeto com essa estrutura: '''npx create-next-app@latest my-next-app'''
 2. Adicione Rotas e Componentes: Estruture suas rotas dentro da app/ e crie subpastas para organizar as diferentes partes do seu projeto, seguindo a estrutura modularizada.
 3. Configure o Roteamento Dinâmico: Adicione pastas com [slug] para criar páginas dinâmicas.
 4. Desenvolva Componentes Reutilizáveis: Coloque componentes na pasta components/, criando uma estrutura limpa e reutilizável.
 
 Esse novo modelo de estrutura em Next.js 14 permite um fluxo de desenvolvimento mais rápido e otimizado, especialmente em grandes aplicações onde a modularidade e a performance são prioridades.
 
-´´´
-import Greeting from './Greeting';
 
-function App() {
-  return (
-    <div>
-      <Greeting name="Alice" />
-      <Greeting name="Bob" />
-    </div>
-  );
-}
-
-export default App;
-´´´
 
