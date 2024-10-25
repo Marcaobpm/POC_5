@@ -154,7 +154,10 @@ A nova estrutura simplifica a busca de dados com métodos como fetch, que pode s
 3. Configure o Roteamento Dinâmico: Adicione pastas com [slug] para criar páginas dinâmicas.
 4. Desenvolva Componentes Reutilizáveis: Coloque componentes na pasta components/, criando uma estrutura limpa e reutilizável.
 
-Esse novo modelo de estrutura em Next.js 14 permite um fluxo de desenvolvimento mais rápido e otimizado, especialmente em grandes aplicações onde a modularidade e a performance são prioridades.
+Esse novo modelo de estrutura em Next.js 14 permite um fluxo de desenvolvimento mais rápido e otimizado, especialmente em grandes aplicações onde a modularidade e a performance são prioridades.}
+
+# Exemplo de Estrutura de Projeto NextJS 14 ou superior
 
 
+![Exemplo Estrutura de Projeto NextJS 14 ou superior](https://github.com/user-attachments/assets/39a8bd59-87c7-47b4-9092-5eadb26bc46d)
 
